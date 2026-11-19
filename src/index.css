@@ -1802,3 +1802,275 @@ body {
     flex: 1;
   }
 }
+
+.settings-page {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.settings-page > h1 {
+  margin: 0 0 12px;
+  color: #1e293b;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.settings-layout {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 12px;
+}
+
+.settings-menu,
+.settings-card {
+  border: 1px solid #e1e7ef;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.settings-menu {
+  height: fit-content;
+  padding: 8px;
+}
+
+.settings-menu button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 5px;
+  padding: 0 10px;
+  background: transparent;
+  color: #64748b;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.settings-menu button.active {
+  background: #edf4ff;
+  color: #397ef4;
+  font-weight: 700;
+}
+
+.settings-menu button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.settings-card {
+  min-height: 430px;
+  padding: 18px;
+}
+
+.settings-section {
+  border-bottom: 1px solid #edf1f6;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.settings-section h2 {
+  margin: 0 0 12px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.settings-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.settings-avatar {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #397ef4;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.settings-profile strong,
+.settings-profile span {
+  display: block;
+}
+
+.settings-profile strong {
+  color: #334155;
+  font-size: 12px;
+}
+
+.settings-profile span {
+  margin-top: 3px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.settings-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.settings-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.settings-form-grid input,
+.settings-form-grid select {
+  height: 38px;
+  border: 1px solid #dfe5ed;
+  border-radius: 5px;
+  background: #fff;
+  color: #334155;
+  padding: 0 10px;
+  font-size: 12px;
+  outline: none;
+}
+
+.settings-form-grid input:focus,
+.settings-form-grid select:focus {
+  border-color: #75a7f7;
+  box-shadow: 0 0 0 2px #edf4ff;
+}
+
+.settings-toggle-row {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.settings-toggle-row:last-child {
+  border-bottom: 0;
+}
+
+.settings-toggle-row strong,
+.settings-toggle-row span {
+  display: block;
+}
+
+.settings-toggle-row strong {
+  color: #334155;
+  font-size: 12px;
+}
+
+.settings-toggle-row div > span {
+  margin-top: 3px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.settings-toggle {
+  position: relative;
+  width: 42px;
+  height: 24px;
+  flex: none;
+  border: 0;
+  border-radius: 999px;
+  background: #cbd5e1;
+  padding: 0;
+  cursor: pointer;
+  transition: 150ms ease;
+}
+
+.settings-toggle span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.18);
+  transition: 150ms ease;
+}
+
+.settings-toggle.on {
+  background: #397ef4;
+}
+
+.settings-toggle.on span {
+  left: 21px;
+}
+
+.settings-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.settings-saved {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #23845d;
+  font-size: 11px;
+}
+
+.settings-saved svg {
+  width: 15px;
+  height: 15px;
+}
+
+.settings-save {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  border-radius: 5px;
+  padding: 0 14px;
+  background: #397ef4;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.settings-save svg {
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 760px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .settings-menu button {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .settings-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .settings-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-footer {
+    justify-content: space-between;
+  }
+}

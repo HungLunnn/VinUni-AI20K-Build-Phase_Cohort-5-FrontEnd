@@ -10,6 +10,7 @@ import Backlog from './pages/Backlog'
 import FrameDetails from './pages/FrameDetails'
 import Diagnosis from './pages/Diagnosis'
 import HypothesisReview from './pages/HypothesisReview'
+import Settings from './pages/Settings'
 
 // 9 màn hình theo wireframe. Mới có "Danh sách lần chạy"; các màn còn lại là placeholder.
 export default function App() {
@@ -27,7 +28,7 @@ export default function App() {
         <Route path="/runs/:id/review" element={<HypothesisReview />} />
         <Route path="/reports" element={<Placeholder title="Báo cáo" />} />
         <Route path="/backlog" element={<Backlog />} />
-        <Route path="/settings" element={<Placeholder title="Cài đặt" />} />
+        <Route path="/settings" element={<Settings />} />
         <Route path="/runs/:id/dashboard" element={<Dashboard />} />
       </Route>
     </Routes>
